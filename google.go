@@ -56,7 +56,7 @@ func (this *GAuth) CreateSecret(lens ...int) (string, error) {
 		return "", ErrParam
 	}
 	for i := 0; i < length; i++ {
-		secret = append(secret, Table[rand.Intn(len(Table))])
+		secret = append(secret, Table[rand.Intn(len(Table)-1)])
 	}
 	return strings.Join(secret, ""), nil
 }
